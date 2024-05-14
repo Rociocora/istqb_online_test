@@ -11,4 +11,11 @@ function Nombre(){
     imprimir(mensaje, "darBienvenida");
 }
 
+function enviarRespuesta () {
+    //1. Obtenemos la opcion seleccionada
+    let respuestaSeleccionada = document.getElementById("respuestasPregunta1").value;
+    let mensaje = "La respuesta correcta es la C";
+    imprimir(mensaje,"respuestaCorrecta1");
+}
+
 
