@@ -11,7 +11,7 @@ function Nombre(){
             imprimir(mensaje, "darBienvenida");
         }
         else {
-            let mensaje = "Welcome " + introduceNombre + " to ISTQB online test";
+            let mensaje = "Welcome " + introduceNombre;
             imprimir(mensaje, "darBienvenida");
         }
 }
