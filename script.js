@@ -3,18 +3,20 @@ function imprimir(mensaje, idElemento) {
 }
 
 
-function Nombre(){
+function nombre(){
     //1.Obtener los valores del formulario. Para ello ponemos el id del elemento del formulario y y ponemos .value para obtener su valor y guardarlo en una variable.
     let introduceNombre = document.getElementById("introduceNombre").value;
+
+   let mensaje
         if (introduceNombre === "") {
-            let mensaje = "The Name field is required";
-            imprimir(mensaje, "darBienvenida");
+           mensaje = "The Name field is required";
         }
         else {
-            let mensaje = "Welcome " + introduceNombre;
-            imprimir(mensaje, "darBienvenida");
+           mensaje = "Welcome " + introduceNombre;
         }
+    imprimir(mensaje, "darBienvenida");
 }
+
     
 
 function enviarRespuesta () {
