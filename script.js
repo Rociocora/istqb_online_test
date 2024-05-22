@@ -22,7 +22,7 @@ function nombre(){
 function enviarRespuesta () {
     //1. Obtenemos la opcion seleccionada
     let respuestaSeleccionada = document.getElementById("respuestasPregunta").value;
-    let mensaje = "The correct answer is C";
+    let mensaje = "The correct answer is C.";
  
 imprimir(mensaje,"respuestaCorrecta1");
 }
@@ -30,12 +30,22 @@ imprimir(mensaje,"respuestaCorrecta1");
 function corregirRespuesta(){
     let respuestaSeleccionada = document.getElementById("respuestasPregunta").value;
     if (respuestaSeleccionada === "respuestaC"){
-        mensaje = "The answer is correct. Your score is 2.";
+        mensaje = "The answer is correct.";
     }
-    else if(respuestaSeleccionada ==="")
-        mensaje = "The answer is not correct. Your score is 0.";
     else{
-        mensaje = "The answer is not correct. Your score is -1.";
+        mensaje = "The answer is not correct.";
     }
 imprimir(mensaje,"respuestaCorrecta2");
+}
+function verPuntuacion(){
+    let respuestaSeleccionada = document.getElementById("respuestasPregunta").value;
+    if (respuestaSeleccionada === "respuestaC"){
+        mensaje = "Your score is 2.";
+    }
+    else if(respuestaSeleccionada ==="")
+        mensaje = "Your score is 0.";
+    else{
+        mensaje = "Your score is -1.";
+    }
+imprimir(mensaje,"respuestaCorrecta3");
 }
