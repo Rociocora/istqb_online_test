@@ -33,7 +33,7 @@
 
     <div  class="container mt-5">
         <div id="welcome" class="was-validated">
-        <h2>Welcome</h2>
+        <h2 style="background: #338f5c; color: #ffffff; font-weight: bold; padding: 15px; border: 2px solid #1a4b3b; border-radius: 6px;">WELCOME</h2>
         <input type="text" id="introduceNombre" placeholder="Introduce tu Nombre" required maxlength="10">
         <p class="valid-feedback">Correct</p>
         <p class="invalid-feedback">The field Enter your Name is required and must not exceed 10 characters</p>
@@ -42,7 +42,7 @@
         </div>
 
         <div id="test">
-            <h2>Test</h2>
+            <h2 style="background: #338f5c; color: #ffffff; font-weight: bold; padding: 15px; border: 2px solid #1a4b3b; border-radius: 6px;">TEST</h2>
             <p>Istqb Online Test Section</p>
             <div id="mostrarListaPreguntas" class="container mt-5">
          
@@ -217,9 +217,15 @@
                     <p id="respuestaCorrecta10"></p>
                     <p id="verPuntuacion10"></p>
         </div>
+        <div id="puntuacionFinal">
+            <h2 style="background: #338f5c; color: #ffffff; font-weight: bold; padding: 15px; border: 2px solid #1a4b3b; border-radius: 6px;">FINAL SCORE</h2>
+            <button type="button" class="btn btn-success" onclick="puntuacionFinal()">Finish Test</button>
+            <p id="puntuacionFinal"></p>
+        </div>
+
         <div id="ranking">
-            <h2>Ranking</h2>
-            <p>Student Ranking</p>
+            <h2 style="background: #338f5c; color: #ffffff; font-weight: bold; padding: 15px; border: 2px solid #1a4b3b; border-radius: 6px;">Ranking</h2>
+            <p>STUDENT RANKING</p>
         </div>
 
     </div>

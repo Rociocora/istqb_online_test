@@ -1,24 +1,3 @@
-/*let lista = ["B. Pruebas de Regresión","C. Todos aquellos que puedan tener algún uso para la herramienta","A. Requerimientos", "A. Analista funcional", "A. Diseño de Prueba","C. Calculos incorrectos", "C. Validan que el sistema esté completo", "B. Prueba de Aceptación de Usuario", "A. Evaluan las funciones que el sistema debe realizar", "A. Se  basan en la estructura interna del sistema"];
-
-
-function mostrarrespuesta(numeroPregunta) {
-    let respuestaSeleccionada = document.getElementById("pregunta"+numeroPregunta).value;
-    let mensaje = "Su respuesta: " + respuestaSeleccionada;
-    imprimir(mensaje, "hacontestado"+numeroPregunta);
-    
-    let mensaje2 = "La respuesta correcta es " + lista[numeroPregunta-1];
-    imprimir(mensaje2, "mostrarrespuesta"+numeroPregunta);
-
-}
-
-let respuetas = ["B","C","A"]
-
-function mostrarrespuesta(numeroPregunta) {
-    let respuestaCorrecta = lista[numeroPregunta-1];
-    let mensaje = "La respuesta correcta es " + respuestaCorrecta;
-    imprimir(mensaje,"mostrarRespuesta"+numeroPregunta);
-}*/
-
 function imprimir(mensaje, idElemento) {
     document.getElementById(idElemento).innerText = mensaje;
 }
@@ -38,6 +17,7 @@ function nombre(){
 }
 
 let lista = ["C","B","B","C","C","A","B","B","C","A"];
+let puntuaciones = new Array(lista.length).fill(0);
 
 function enviarRespuesta (numeroPregunta) {
     //1. Obtenemos la opcion seleccionada
@@ -53,29 +33,29 @@ function corregirRespuesta(numeroPregunta) {
     let seleccionPregunta = document.getElementById("respuestasPregunta" + numeroPregunta);
     let respuestaSeleccionada = seleccionPregunta.value;
     let respuestasCorrecta = lista[numeroPregunta - 1]
+    let mensaje = "";
     
     if (respuestaSeleccionada === respuestasCorrecta) {
         mensaje = "The answer is correct. Your score is 2.";
+        puntuaciones[numeroPregunta - 1] = 2;
     } else if (respuestaSeleccionada === "") {
         mensaje = "The answer is not correct. Your score is 0.";
+        puntuaciones[numeroPregunta - 1] = 0;
     } else {
         mensaje = "The answer is not correct. Your score is -1.";
+        puntuaciones[numeroPregunta - 1] = -1;
     }
     document.getElementById("verPuntuacion" + numeroPregunta).innerText = mensaje;
 }
 
+function puntuacionFinal() {
+    let total = 0;
+    for (let i = 0; i < puntuaciones.length; i++) {
+        total += puntuaciones[i];
+    }
+    document.getElementById("puntuacionFinal").innerHTML = "<strong style='font-size: 24px;'>Your Total Score Is: " + total + "</strong>";
+}
 
-/*function corregirRespuesta(numeroPregunta){
-    let respuestaSeleccionada = lista[numeroPregunta-1];
-    if (respuestaSeleccionada === lista[numeroPregunta-1]){
-        mensaje = "The answer is correct. Your score is 2.";
-    }
-    else if(respuestaSeleccionada === ""){
-        mensaje = "The anwer is not correct. Your score is 0."
-        
-    }
-    else{
-        mensaje = "The answer is not correct. Your score is -1.";
-    }
-imprimir(mensaje,"respuestaCorrecta"+numeroPregunta);
-}*/
+function imprimir(mensaje, idElemento) {
+    document.getElementById(idElemento).innerText = mensaje;
+}
