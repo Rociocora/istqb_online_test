@@ -2,40 +2,9 @@ function imprimir(mensaje, idElemento) {
     document.getElementById(idElemento).innerText = mensaje;
 }
 
-function nombre() {
-    // Obtener los valores del formulario
-    let introduceNombre = document.getElementById("introduceNombre").value;
-
-    let mensaje;
-    if (introduceNombre === "") {
-        mensaje = "The Name field is required";
-    } else {
-        mensaje = "Welcome " + introduceNombre;
-
-        // Reiniciar los valores del formulario solo si el nombre no está vacío
-        let selects = document.querySelectorAll("select");
-        selects.forEach(select => select.value = "");
-
-        // Restablecer las puntuaciones
-        puntuaciones.fill(0);
-
-        // Limpiar mensajes anteriores
-        for (let i = 1; i <= lista.length; i++) {
-            imprimir("", "respuestaCorrecta" + i);
-            imprimir("", "verPuntuacion" + i);
-        }
-        imprimir("", "puntuacionFinal");
-    }
-    imprimir(mensaje, "darBienvenida");
-}
-
 let lista = ["C", "B", "B", "C", "C", "A", "B", "B", "C", "A"];
 let puntuaciones = new Array(lista.length).fill(0);
 let estudiantes = [];
-
-function imprimir(mensaje, idElemento) {
-    document.getElementById(idElemento).innerText = mensaje;
-}
 
 function nombre() {
     let introduceNombre = document.getElementById("introduceNombre").value;
