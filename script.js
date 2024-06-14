@@ -29,8 +29,6 @@ function nombre() {
     imprimir(mensaje, "darBienvenida");
 }
 
-
-
 let lista = ["C", "B", "B", "C", "C", "A", "B", "B", "C", "A"];
 let puntuaciones = new Array(lista.length).fill(0);
 let estudiantes = [];
