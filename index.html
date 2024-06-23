@@ -31,17 +31,25 @@
 
     </nav>
 
-    <div  class="container mt-5">
-        <div id="welcome" class="was-validated">
-        <h2>WELCOME</h2>
-        <div class="mb-3">
-            <input type="text" id="welcomename" data-cy="input-nombre" placeholder="Introduce tu nombre" required
-            class="form-control" maxlength="10">
-            <div class="valid-feedback" data-cy="success-welcome-message">Nombre correcto</div>
-            <div class="invalid-feedback" data-cy="error-welcome-message">El nombre es obligatorio y debe tener un maximo de 10 caracteres</div>
-        </div>
-        <button type="button" data-cy="button-start" class="btn btn-success" onclick="nombre()">Enter</button>
-        <p id="darBienvenida" data-cy="welcome-message"></p>
+    <div class="container mt-5">
+
+        <div id="welcome">
+            <h2>Welcome</h2>
+            
+        <form class="was-validated">
+
+            <div class="mb-3">
+                <input type="text" id="welcomename" data-cy="input-welcome-name" placeholder="Introduce tu nombre" required
+                    class="form-control" maxlength="10">
+                <div class="valid-feedback" data-cy="success-welcome-message">Nombre correcto</div>
+                <div class="invalid-feedback" data-cy="error-welcome-message">El nombre es obligatorio y debe tener un maximo de 10 caracteres</div>
+            </div>
+
+            <button type="button" class="btn btn-success" data-cy="button-start" onclick="verMensajeBienvenida()">Comenzar</button>
+        </form>
+
+        <p id="welcomemessage" data-cy="welcome-message"></p>
+            
         </div>
 
         <div id="test">
