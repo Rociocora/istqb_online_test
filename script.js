@@ -7,7 +7,7 @@ let puntuaciones = new Array(lista.length).fill(0);
 let estudiantes = [];
 
 function nombre() {
-    let introduceNombre = document.getElementById("introduceNombre").value;
+    let introduceNombre = document.getElementById("welcomename").value;
 
     let mensaje;
     if (introduceNombre === "") {

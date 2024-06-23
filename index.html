@@ -34,11 +34,14 @@
     <div  class="container mt-5">
         <div id="welcome" class="was-validated">
         <h2>WELCOME</h2>
-        <input type="text" id="introduceNombre" placeholder="Introduce tu Nombre" required maxlength="10">
-        <p class="valid-feedback">Correct</p>
-        <p class="invalid-feedback">The field Enter your Name is required and must not exceed 10 characters</p>
-        <button type="button" class="btn btn-success" onclick="nombre()">Enter</button>
-        <p id="darBienvenida"></p>
+        <div class="mb-3">
+            <input type="text" id="welcomename" data-cy="input-nombre" placeholder="Introduce tu nombre" required
+            class="form-control" maxlength="10">
+            <div class="valid-feedback" data-cy="success-welcome-message">Nombre correcto</div>
+            <div class="invalid-feedback" data-cy="error-welcome-message">El nombre es obligatorio y debe tener un maximo de 10 caracteres</div>
+        </div>
+        <button type="button" data-cy="button-start" class="btn btn-success" onclick="nombre()">Enter</button>
+        <p id="darBienvenida" data-cy="welcome-message"></p>
         </div>
 
         <div id="test">
