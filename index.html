@@ -41,14 +41,14 @@
             <div class="mb-3">
                 <input type="text" id="welcomename" data-cy="input-welcome-name" placeholder="Introduce tu nombre" required
                     class="form-control" maxlength="10">
-                <div class="valid-feedback" data-cy="success-welcome-message">Nombre correcto</div>
-                <div class="invalid-feedback" data-cy="error-welcome-message">El nombre es obligatorio y debe tener un maximo de 10 caracteres</div>
+                <div class="valid-feedback" data-cy="success-welcome-message">Correct</div>
+                <div class="invalid-feedback" data-cy="error-welcome-message">The name cannot have more than 10 characters</div>
             </div>
 
-            <button type="button" class="btn btn-success" data-cy="button-start" onclick="verMensajeBienvenida()">Comenzar</button>
+            <button type="button" class="btn btn-success" data-cy="button-start" onclick="nombre()">Enter</button>
         </form>
 
-        <p id="welcomemessage" data-cy="welcome-message"></p>
+        <p id="darBienvenida" data-cy="welcome-message"></p>
             
         </div>
 
