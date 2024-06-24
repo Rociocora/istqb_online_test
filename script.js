@@ -65,7 +65,7 @@ function puntuacionFinal() {
         total += puntuaciones[i];
     }
 
-    let introduceNombre = document.getElementById("introduceNombre").value;
+    let introduceNombre = document.getElementById("welcomename").value;
     estudiantes.push({ nombre: introduceNombre, puntuacion: total });
     
     estudiantes.sort((a, b) => b.puntuacion - a.puntuacion); // Ordenar por puntuación de mayor a menor
