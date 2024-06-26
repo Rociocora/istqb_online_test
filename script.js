@@ -10,7 +10,7 @@ function nombre() {
     let introduceNombre = document.getElementById("welcomename").value;
 
     let mensaje;
-    if (introduceNombre === "") {
+    if (introduceNombre === "--") {
         mensaje = "The Name field is required";
     } else {
         mensaje = "Welcome " + introduceNombre;
