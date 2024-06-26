@@ -10,7 +10,7 @@ function nombre() {
     let introduceNombre = document.getElementById("welcomename").value;
 
     let mensaje;
-    if (introduceNombre === "") {
+    if (introduceNombre === "--") {
         mensaje = "The Name field is required";
     } else {
         mensaje = "Welcome " + introduceNombre;
@@ -64,13 +64,15 @@ function puntuacionFinal() {
         corregirRespuesta(i + 1); // Llamar a corregirRespuesta antes de sumar
         total += puntuaciones[i];
     }
-
+    
+    document.getElementById("puntuacionFinal").innerHTML = "<strong style='font-size: 24px;'>Your Total Score Is: " + total + "</strong>";
+    
     let introduceNombre = document.getElementById("welcomename").value;
+    
     estudiantes.push({ nombre: introduceNombre, puntuacion: total });
     
     estudiantes.sort((a, b) => b.puntuacion - a.puntuacion); // Ordenar por puntuación de mayor a menor
 
-    document.getElementById("puntuacionFinal").innerHTML = "<strong style='font-size: 24px;'>Your Total Score Is: " + total + "</strong>";
 }
 
 function mostrarRanking() {
