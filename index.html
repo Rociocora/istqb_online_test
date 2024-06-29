@@ -230,14 +230,14 @@
         </div>
         <div id="calcularPuntuacion">
             <h2>FINAL SCORE</h2>
-            <button type="button" class="btn btn-success" onclick="puntuacionFinal()">Finish Test</button>
-            <p id="puntuacionFinal"></p>
+            <button type="button" data-cy="buttonfinalscore" class="btn btn-success" onclick="puntuacionFinal()">Finish Test</button>
+            <p id="puntuacionFinal" datacy="finalscore"></p>
         </div>
 
         <div id="ranking">
             <h2>RANKING</h2>
-            <button type="button" class="btn btn-success" onclick="mostrarRanking()">Show Ranking</button>
-            <div id="listaRanking"></div>
+            <button type="button" data-cy="buttonranking" class="btn btn-success" onclick="mostrarRanking()">Show Ranking</button>
+            <div id="listaRanking" data-cy="showRanking"></div>
         </div>
 
     </div>
