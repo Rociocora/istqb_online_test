@@ -83,4 +83,3 @@ function mostrarRanking() {
     rankingHTML += "</ol>";
     document.getElementById("listaRanking").innerHTML = rankingHTML;
 }
-
